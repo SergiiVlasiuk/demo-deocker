@@ -1,4 +1,4 @@
-# demo-deocker
+# demo-docker
 
 ## Logs
     docker logs <containerId>
