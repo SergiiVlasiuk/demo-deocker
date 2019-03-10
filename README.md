@@ -6,6 +6,9 @@
 ## Maria db
 
     docker run --name demo-mariadb -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -p 3306:3306 -d mariadb
+    
+### [useful](https://hub.docker.com/r/mysql/mysql-server)
+
 ### sql (create schema|user|privelegies)
     
 	CREATE USER 'batch'@'%' IDENTIFIED BY 'batch';
