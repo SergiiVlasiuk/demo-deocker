@@ -1,5 +1,7 @@
 # demo-docker
 
+    docker exec -it <containerId> bash
+
 ## Logs
     docker logs <containerId>
 
