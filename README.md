@@ -2,8 +2,19 @@
 
     docker exec -it <containerId> bash
 
-## Logs
+## some info
+### logs
     docker logs <containerId>
+    docker logs <containerId> -f
+### environment variables
+    docker exec <containerId> env
+### clean containers & images:
+
+    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+    
+[docker-remove-all-images-and-containers](docker-remove-all-images-and-containershttps://techoverflow.net/2013/10/22/docker-remove-all-images-and-containers/)
+[to remove old and unused Docker images](https://stackoverflow.com/a/32723127/5728095)
 
 ## Maria db
 
