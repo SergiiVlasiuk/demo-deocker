@@ -34,6 +34,10 @@
 
 ## [postgresql](https://hub.docker.com/_/postgres)
 
-    docker run --name postgesql__scala-db -e POSTGRES_PASSWORD=p12345 -d postgres
-    
+
+    docker run --rm -P --publish 127.0.0.1:5432:5432 --name postgesql__scala-db -e POSTGRES_PASSWORD=p12345 -v /usr/local/data/postgresql:/var/lib/postgresql/data -d postgres
+
+    docker run -p 5432:5432 --name postgesql__scala-db -e POSTGRES_PASSWORD=p12345 -v /usr/local/data/postgresql:/var/lib/postgresql/data -d postgres
+
+to connect docker you can use `localhost` or `ip` taken from `ifconfig` info.
 
