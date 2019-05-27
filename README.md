@@ -32,5 +32,8 @@
     
     -- DROP USER 'batch'@'*';
 
+## [postgresql](https://hub.docker.com/_/postgres)
 
+    docker run --name postgesql__scala-db -e POSTGRES_PASSWORD=p12345 -d postgres
+    
 
