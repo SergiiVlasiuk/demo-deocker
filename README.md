@@ -43,3 +43,8 @@ Create a data directory on a suitable volume on your host system, e.g. `/usr/loc
 
 to connect docker you can use `localhost` or `ip` taken from `ifconfig` info.
 
+    docker run -it --rm postgres psql -h 172.17.0.1 -U postgres
+
+in case network is specified, next instruction should be used (also possible to replace `IP` with `docker host name`):
+
+    docker run -it --rm --network docker_gwbridge postgres psql -h 172.17.0.1 -U postgres
